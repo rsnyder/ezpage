@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title></title>
+  <link href="main.css" rel="stylesheet">
+</head>
+<body>
+  <script src="https://rsnyder.github.io/ezpage-wc/dist/js/index.js" type="module"></script>
+
+  <script type="text/javascript">
+    // Provides deep linking with GitHub Pages
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        let decoded = l.search.slice(1).split('&').map(s => s.replace(/~and~/g, '&')).join('?')
+        window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+      }
+    }(window.location))
+  </script>
+
+  <script type="module">
+    // Gets page HTML by converting Markdown to HTML
+    // Location of Markdown file is determined by the URL path
+
+    window.getHtml().then(html => {
+      let el = new DOMParser().parseFromString(html, 'text/html').children[0].children[1]
+      let meta = el.querySelector('ez-meta')
+      let header = el.querySelector('ez-header')
+      let firstHeading = el.querySelector('h1, h2',)
+      let firstParagraph = el.querySelector('p')
+
+      let title = meta?.attributes.title
+        ? meta.getAttribute('title')
+        : header?.attributes.title
+          ? header.getAttribute('title')
+          : firstHeading
+            ? firstHeading.textContent
+            : ''
+
+      let description = meta?.attributes.description
+        ? meta.getAttribute('description')
+        : firstParagraph
+          ? firstParagraph.textContent
+          : ''
+
+      let robots = meta?.attributes.robots ? meta.getAttribute('robots') : ''
+
+      if (title) document.title = title
+      if (description) document.querySelector('meta[name="description"]').setAttribute('content', description)
+      if (robots) {
+        let robotsMeta = document.createElement('meta')
+        robotsMeta.setAttribute('name', 'robots')
+        robotsMeta.setAttribute('content', robots)
+        document.head.appendChild(robotsMeta)
+      }
+      if (meta) meta.remove()
+      document.body.innerHTML = html })
+
+  </script>
+
+</body>
+</html>
