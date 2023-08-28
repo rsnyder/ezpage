@@ -5,7 +5,7 @@
 
 # Vainakh towers
 
-![Picture of Ingush tower in the mountains. Ingushetia, Caucasus](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Ingushetia%2C_Russia%2C_Armkhi%2C_Ingush_tower.jpg/1024px-Ingushetia%2C_Russia%2C_Armkhi%2C_Ingush_tower.jpg){right}
+![Picture of Ingush tower in the mountains. Ingushetia, Caucasus](wc:Ingushetia, Russia, Armkhi, Ingush tower.jpg){right}
 
 The ==Vainakh tower architecture=={Q6960545}, also called Nakh architecture, is a characteristic feature of ancient and medieval architecture of ==Chechnya=={Q5187} and ==Ingushetia=={Q5219}.
 
