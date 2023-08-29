@@ -25,5 +25,4 @@ Lorem ipsum dolor sit amet, [consectetur adipiscing](?zoom=321,268,644,712) elit
 
 ### Page links
 
-- [folder](folder)
-- [folder/nested](folder/nested)
+- [about](about)
