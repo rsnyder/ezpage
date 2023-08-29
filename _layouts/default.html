@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
-    <link rel="stylesheet" href="/{{baseurl}}/main.css">
+    <link rel="stylesheet" href="/{{ site.baseurl }}/main.css">
     <script src="https://rsnyder.github.io/ezpage-wc/js/index.js" type="module"></script>
   </head>
   <body>
     {%- include header.html -%}
     <main class="page-content" aria-label="Content">
-      <div>theme={{ site.theme }} baseurl={{ site.baseurl }}</div>
+      <div>owner={{ site.owner }} repo={{ site.repo }} baseurl={{ site.baseurl }}</div>
       {{ content }}
     </main>
     {%- include footer.html -%}
