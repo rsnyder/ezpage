@@ -27,7 +27,7 @@ Lorem ipsum dolor sit amet, [consectetur adipiscing](?zoom=321,268,644,712) elit
 
 - [about](about)
 
-## Footnotes
+# Footnotes
 
 [^1]: Our first footnote (this should have 2 back links)
 [^2]: Our second footnote

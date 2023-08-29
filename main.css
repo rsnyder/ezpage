@@ -28,3 +28,7 @@ main {
 ul {
   list-style-position: inside;
 }
+
+.section-1 {
+  display: flow-root;
+}
