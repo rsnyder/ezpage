@@ -11,7 +11,7 @@
   <body>
     {%- include header.html -%}
     <main class="page-content" aria-label="Content">
-      <div>theme={{ theme }} baseurl={{ baseurl }}</div>
+      <div>theme={{ site.theme }} baseurl={{ site.baseurl }}</div>
       {{ content }}
     </main>
     {%- include footer.html -%}
